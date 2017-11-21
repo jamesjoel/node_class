@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+	<hr />
+	<a href="/add" class="btn btn-success">Add Student</a>
+	<hr />
+	<table class="table table-hover table-striped table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Full Name</th>
+			<th>Email</th>
+			<th>City</th>
+<<<<<<< HEAD
+			<th>Edit</th>
+=======
+>>>>>>> be0ee1d3ae779b0b0a2dc5f67ba0c96b67a58d7d
+			<th>Delete</th>
+		</tr>
+		<% student.forEach(function(x, n){ %>
+			<tr>
+				<td><%= n+1 %></td>
+				<td><%= x.f_name %></td>
+				<td><%= x.email %></td>
+				<td><%= x.city %></td>
+<<<<<<< HEAD
+				<td><a href="/edit/<%= x._id %>" class="btn btn-info">Edit</a></td>
+=======
+>>>>>>> be0ee1d3ae779b0b0a2dc5f67ba0c96b67a58d7d
+				<td><a href="/delete/<%= x._id %>" class="btn btn-danger">Delete</a></td>
+			</tr>
+	<% }) %>	
+	</table>
+	
+</div>
+</body>
+</html>

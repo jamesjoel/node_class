@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+	<hr />
+	<a href="/" class="btn btn-success">View Student</a>
+	<hr />
+	<div class="col-md-4">
+		<form action="/add" method="post">
+			<div class="form-group">
+				<label>Full Name</label>
+				<input type="text" name="f_name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input type="text" name="email" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>City</label>
+				<select name="city" class="form-control">
+					<option>Select</option>
+					<option>Indore</option>
+					<option>Ujjain</option>
+					<option>Mumbai</option>
+					<option>Dewas</option>
+				</select>
+			</div>
+			<input type="submit" value="Add" class="btn btn-primary">
+		</form>
+	</div>
+	
+</div>
+</body>
+</html>

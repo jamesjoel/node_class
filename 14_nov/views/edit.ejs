@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+	<hr />
+	<a href="/" class="btn btn-success">View Student</a>
+	<hr />
+	<div class="col-md-4">
+		<form action="/edit/<%= data._id %>" method="post">
+			<div class="form-group">
+				<label>Full Name</label>
+				<input type="text" name="f_name" class="form-control" value="<%= data.f_name %>">
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input type="text" name="email" class="form-control" value="<%= data.email %>">
+			</div>
+			<div class="form-group">
+				<label>City</label>
+				<select name="city" class="form-control">
+					<option>Select</option>
+					<option <% if(data.city=='Indore'){%> selected='selected' <%}  %>>Indore</option>
+					<option<% if(data.city=='Ujjain'){%> selected='selected' <%}  %>>Ujjain</option>
+					<option<% if(data.city=='Mumbai'){%> selected='selected' <%}  %>>Mumbai</option>
+					<option<% if(data.city=='Dewas'){%> selected='selected' <%}  %>>Dewas</option>
+				</select>
+			</div>
+			<input type="submit" value="Edit" class="btn btn-primary">
+		</form>
+	</div>
+	
+</div>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> dd449a28efff0ca148c9038091e85eadfadb30cf
