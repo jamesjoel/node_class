@@ -6,6 +6,7 @@ router.get('/', function(req, res){
 });
 router.get('/about', require('../controllers/about'));
 router.get('/contact', require('../controllers/about'));
+router.get('/city', require('../controllers/city'));
 
 
 module.exports=router;
