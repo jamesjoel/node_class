@@ -1,5 +1,6 @@
 var express		 	= require('express');
 var bodyParser 		= require('body-parser');
+var flash			=require('connect-flash');
 
 var app = express();
 
@@ -14,6 +15,7 @@ app.listen(3000,function(){
 
 //convert body data in json format
 app.use(bodyParser.urlencoded());
+app.use(flash());
 //set static path
 app.use(cookieParser());
 app.use(session({ secret : 'tss'}));
