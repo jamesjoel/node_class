@@ -19,6 +19,14 @@ app.use(flash());
 //set static path
 app.use(cookieParser());
 app.use(session({ secret : 'tss'}));
+
+
+app.use(function(req, res, next){
+	res.locals.session=req.session;
+	next();
+});
+
+
 app.use(require('./controllers/router'));
 app.use(express.static(__dirname+'/public'));
 
