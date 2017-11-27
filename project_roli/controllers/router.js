@@ -1,9 +1,20 @@
 var express=require('express');
 var router=express.Router();
 
-router.use(['/user','/setting'], function(req, res){
 
-})
+// Array containing backdoor controllers link
+var protactor=['/user', '/setting'];
+
+router.use(protactor, function(req, res, next){
+	if(! req.session.user_logged_in)
+	{
+		res.redirect('/login');
+	}
+	else{
+		next();
+	}
+});
+
 
 router.get('/', function(req, res){
 	var pageData={ title : "Home Page", pagename : './home/index' };
