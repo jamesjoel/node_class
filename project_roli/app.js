@@ -1,6 +1,7 @@
 var express		 	= require('express');
 var bodyParser 		= require('body-parser');
 var flash			=require('connect-flash');
+// var multer			=require('multer');
 
 var app = express();
 
@@ -8,12 +9,15 @@ var session=require('express-session');
 var cookieParser=require('cookie-parser');
 
 
-
 app.listen(3000,function(){
 	console.log('Server Running.......');
 });
 
 //convert body data in json format
+app.use(function(req, res, next){
+	res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+	next();
+});
 app.use(bodyParser.urlencoded());
 app.use(flash());
 //set static path
